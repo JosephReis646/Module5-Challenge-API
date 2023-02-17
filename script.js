@@ -51,3 +51,24 @@ updateTimeBlocks();
 
 // update the colors every hour
 setInterval(updateTimeBlocks, 60 * 60 * 1000);
+
+// function to load saved events from local storage
+function loadEvents() {
+  $(".description").each(function () {
+    var id = $(this).parent().attr("id");
+    $(this).val(localStorage.getItem(id));
+  });
+}
+
+// function to save events to local storage
+function saveEvent() {
+  var id = $(this).parent().attr("id");
+  var value = $(this).siblings(".description").val();
+  localStorage.setItem(id, value);
+}
+
+// load saved events on page load
+loadEvents();
+
+// save events when save button is clicked
+$(".saveBtn").on("click", saveEvent);
