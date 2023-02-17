@@ -32,9 +32,6 @@ Planner is aware of current time and each hour is color coded in past, present, 
 Able to add events into planner and it is saved upon a refresh. 
 
 ```
-![final image of assignment]()
-![final image of assignment]()
+![final image of assignment](Screenshot1.png)
 
-
-
-# 
+# https://josephreis646.github.io/Module5-Challenge-API/
